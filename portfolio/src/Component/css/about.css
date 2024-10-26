@@ -1,0 +1,573 @@
+/* Base Styles */
+body {
+    background-color: #f1f1f1;
+    color: #E0E0E0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.about{
+    padding: 0rem  0rem;
+    margin-bottom: -80px;
+}
+
+/* Common Heading Styles */
+.section-head {
+    color: #D32F2F;
+    font-size: 3.5rem;
+    margin: -1.5rem 2rem 0rem 2rem;
+    padding-left: 15px;
+    text-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+    animation: colorChange 5s infinite alternate;
+}
+
+/* ------------------- ABOUT SECTION ------------------- */
+.main-container {
+    min-height: 100vh;
+    width: 100%;
+    
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 6rem;
+    height: auto;
+    background-color: #f1f1f1;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.profile-picture {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #0288D1;
+    box-shadow: 0 0 20px rgba(2, 136, 209, 0.5);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    animation: fadeInUp 1s ease-out;
+
+}
+
+.profile-picture:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.about-content {
+    flex: 2;
+    padding-left: 2rem;
+    text-align: left;
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.bio-text {
+    margin: -1rem 4rem;
+    line-height: 1.5;
+}
+
+.read-more {
+    background-color: transparent;
+    border: 1px solid #0288D1;
+    color: #0288D1;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    border-radius: 4px;
+    animation: fadeInUp 1s ease-out 1s both;
+}
+
+.read-more:hover {
+    background-color: #0288D1;
+    color: #121212;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(2, 136, 209, 0.4);
+}
+
+.read-more:focus {
+    outline: 2px solid #0288D1 ;
+    outline-offset: 2px;
+}
+
+.about .line-styling {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .line-styling .style-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #0288D1, #D32F2F);
+    animation: pulseCircle 2s infinite;
+}
+
+.about .line-styling .style-line {
+    width: 95%;
+    height: 5px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #0288D1, #D32F2F);
+    box-shadow: 0 0 10px rgba(2, 136, 209, 0.3);
+    animation: expandLine 1.5s ease-out;
+}
+
+@keyframes expandLine {
+    0% { width: 0; }
+    100% { width: 95%; }
+}
+
+/* Keyframe for circle pulsing */
+
+@keyframes pulseCircle {
+    0% { 
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(2, 136, 209, 0.7);
+    }
+    70% {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 10px rgba(2, 136, 209, 0);
+    }
+    100% { 
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(2, 136, 209, 0);
+    }
+}
+
+/* ------------------- EDUCATION & EXPERIENCE SECTIONS ------------------- */
+.education,
+.exp {
+    /* margin-top: 10px; */
+    padding: 0px 3rem;
+}
+
+
+.exp-head {
+    text-align: right;
+    font-size: 3.5rem;
+    padding-right: 0rem;
+    margin: 0rem 1rem;
+    color: #D32F2F;
+    text-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+}
+
+.edu-side,
+.exp-side {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap:0rem;
+    padding: 0px 0.5rem;
+}
+
+.edu-leftside,
+.exp-rightside {
+    flex: 1;
+    margin: 1.5rem 0rem;
+}
+
+.edu-rightside,
+.exp-leftside {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.edu-rightside img,
+.exp-leftside img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.education li,
+.exp li {
+    display: flex;
+    width: 700px;
+    align-items: flex-start;
+    height: 130px;
+    margin: 1.5rem 0.5rem;
+    padding: 1rem;
+    text-align: left;
+    border-radius: 20px;
+    animation-fill-mode: both;
+    animation-duration: 1000ms;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    opacity: 0;
+    animation-name: react-reveal;
+    background-color: #1E1E1E;
+    border: 1px solid #0288D1;
+    box-shadow: 0 0 10px rgba(2, 136, 209, 0.2);
+}
+
+.education li.animated,
+.exp li.animated {
+    opacity: 1;
+}
+
+.education li:hover,
+.exp li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(2, 136, 209, 0.4);
+}
+
+.education-icon,
+.exp-icon {
+    background-color: #D32F2F ;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 10px 20px;
+    box-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+}
+
+.education-icon i,
+.exp-icon i {
+    color: white;
+    font-size: 20px;
+}
+
+.education-details,
+.exp-details {
+    flex: 1;
+    margin-top: 10px;
+}
+
+.education-date,
+.exp-date {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0288D1;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.education-institution,
+.exp-post {
+    font-size: 18px;
+    color: white;
+    margin: 0 0 5px 0;
+}
+
+.education-gpa,
+.companyname {
+    font-size: 1.05rem;
+    color: rgba(234, 234, 234, 0.8);
+    margin: 0;
+    line-height: 126%;
+    font-weight: 600;
+}
+
+/* ------------------- SKILLS SECTION ------------------- */
+.skills {
+    margin-top: 70px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.skills-head {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #D32F2F;
+    text-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+    animation: colorChange 5s infinite alternate;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 2rem 4rem;
+}
+
+.skill-category {
+    width: 200px;
+    transition: all 0.3s ease-in-out;
+}
+
+.skill-category h3 {
+    /* margin-bottom: 10px; */
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    line-height: 2;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #0288D1;
+    border-bottom: 10px solid #D32F2F;
+    box-shadow: 0 0 10px rgba(2, 136, 209, 0.5);
+}
+
+.skill-category i {
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.skill-category span {
+    padding-left: 20px;
+}
+
+.skill-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.skill-items.expand {
+    max-height: 600px;
+}
+
+.skill-items.collapse {
+    max-height: 0;
+}
+
+.skill-items li {
+    margin: 5px 0;
+    padding: 5px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: floatDown 5s forwards ease-out;
+    animation-delay: var(--delay);
+    line-height: 2;
+    border-bottom-left-radius: 3px;
+    border-bottom-style: ridge;
+    display: flex;
+    align-items: center;
+    background-color: #1E1E1E;
+    border-bottom: 10px ridge #D32F2F;
+    box-shadow: 0 0 10px rgba(2, 136, 209, 0.2);
+}
+
+.skill-items li i {
+    width: 30px;
+    text-align: center;
+}
+
+.skill-items li span {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.skill-items.expand li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-items li:hover {
+    transform: translateX(5px);
+}
+
+/* ------------------- ANIMATIONS ------------------- */
+@keyframes floatDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes react-reveal {
+    0% {
+        transform: translate3d(0px, 100%, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes colorChange {
+    0% { color: #0288D1; }
+    50% { color: #D32F2F; }
+    100% { color: #0288D1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row;
+    }
+
+    .about-image {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .edu-side,
+    .exp-side {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education li,
+    .exp li {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .edu-rightside img,
+    .exp-leftside img {
+        margin-left: 0;
+    }
+
+    .skills-list {
+        flex-wrap: wrap;
+    }
+
+    .skill-category {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding-top: 60px;
+    }
+
+    .about-container {
+        padding: 2rem;
+    }
+
+    .section-head {
+        font-size: 2.5rem;
+    }
+
+    .bio-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .education li,
+    .exp li {
+        height: auto;
+        min-height: 130px;
+    }
+
+    .skill-category {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .profile-picture {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section-head {
+        font-size: 2rem;
+    }
+
+    .education-icon,
+    .exp-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .education-institution,
+    .exp-post {
+        font-size: 16px;
+    }
+}
+
+/* Adjustments for smaller screen sizes (max-width: 600px) */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .section-head, .exp-head {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    .about-content {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .profile-picture {
+        width: 200px;
+        height: 200px;
+    }
+
+    .skills-list {
+        flex-direction: column;
+    }
+
+    .skill-category {
+        width: 100%;
+    }
+
+    .edu-side, .exp-side {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education li, .exp li {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .edu-rightside img, .exp-leftside img {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}

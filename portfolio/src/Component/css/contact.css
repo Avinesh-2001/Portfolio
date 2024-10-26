@@ -1,0 +1,419 @@
+.contact {
+  padding: 30px 0 0;
+  background-color: #f1f1f1;
+  min-height: calc(100vh - 60px);
+  /* Adjust based on your navbar height */
+  display: flex;
+  flex-direction: column;
+}
+
+.section-head {
+  color: #D32F2F;
+  font-size: 3.5rem;
+  text-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+  font-size: 3.5rem;
+  text-align: left;
+  padding-left: -25px;
+  margin: -20px 0 0px 25px;
+  animation: colorChange 5s infinite alternate;
+
+}
+
+@keyframes colorChange {
+  0% { color: #0288D1; }
+  50% { color: #D32F2F; }
+  100% { color: #0288D1; }
+}
+
+.contact-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 65px;
+  padding-bottom: 10px;
+}
+
+.contact-leftSide {
+  width: 35%;
+  padding: 30px 100px 0 20px;
+}
+
+.contact-rightside {
+  width: 50%;
+  padding: 100px 50px;
+  color: white;
+  text-align: left;
+}
+
+.input-container {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.input-container label {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  /* background-color: #121212; */
+  background-color: #f1f1f1;
+  color: #D32F2F;
+  font-weight: bold;
+  padding: 0 6px;
+  font-size: 14px;
+}
+
+.input-container input,
+.input-container textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  /* border: 1px solid #1f1f1f; */
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  color: #D32F2F;
+  outline: none;
+  border: 4px solid white;
+}
+
+.contact-rightside p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Adds space between the icon and the text */
+}
+
+.contact-rightside i {
+  background-color: #D32F2F;
+  color: #212121;
+  width: 40px;
+  height: 40px;
+  font-weight: 700;
+  display: flex;
+  font-size: 23px;
+  transition: 250ms ease-in-out;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.contact-rightside a {
+  color: white;
+  text-align: left;
+  text-decoration: none; /* Remove underline */
+  line-height: 110%;
+  font-weight: 500;
+  width: 45%;
+  font-size: 1.1rem;
+  word-break: break-word;
+}
+
+.contact-rightside a:hover {
+  background: linear-gradient(50deg, #D32F2F, #0288D1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.submitBtn {
+  background-color: #D32F2F;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.submitBtn:hover {
+  background: linear-gradient(50deg, #D32F2F, #0288D1);
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+}
+
+.contact-social-icons {
+  display: flex;
+  justify-content: center;
+  margin: -130px 0px 0px 200px;
+  gap: 2rem;
+  animation: fadeInUp 1s ease-out 1.5s both;
+}
+
+.contact-social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #D32F2F;
+  color: #121212;
+  text-decoration: none;
+  font-size: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 250ms ease-in-out;
+}
+
+.contact-social-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  animation: bounce 0.2s ease;
+}
+
+/* .linkedin { background-color: #0077B5; }
+.github { background-color: #6e5494; }
+.leetcode { background-color: #FFA116; }
+.GeeksforGeeks { background-color: #2F8D46; }*/
+
+.linkedin:hover {
+  background-color: #D32F2F;
+}
+
+.github:hover {
+  background-color: #D32F2F;
+}
+
+.leetcode:hover {
+  background-color: #D32F2F;
+}
+
+.GeeksforGeeks:hover {
+  background-color: #D32F2F;
+}
+
+.copyRight {
+  background-color: #D32F2F;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .contact-leftSide,
+  .contact-rightside {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .contact-rightside {
+    margin-top: 30px;
+  }
+
+  .contact-head {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Keep all your existing CSS exactly as is, then add these at the end */
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Add animation to existing elements */
+.contact {
+  animation: fadeIn 1s ease-out;
+}
+
+.contact-head {
+  animation: slideIn 1s ease-out;
+}
+
+.contact-leftSide {
+  animation: slideIn 1s ease-out 0.2s;
+}
+
+.contact-rightside {
+  animation: slideIn 1s ease-out 0.4s;
+}
+
+/* Additional Media Queries */
+@media screen and (max-width: 1024px) {
+  .contact-head {
+    font-size: 3rem;
+    margin: -15px 0 0px 20px;
+  }
+
+  .contact-leftSide {
+    padding: 30px 50px 0 20px;
+  }
+
+  .contact-social-icons {
+    margin: -100px 0px 0px 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .contact-leftSide,
+  .contact-rightside {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact-rightside {
+    padding-top: 50px;
+  }
+
+  .contact-head {
+    font-size: 2.5rem;
+    margin: -10px 0 20px 15px;
+  }
+
+  .contact-social-icons {
+    margin: 20px auto;
+    justify-content: center;
+  }
+
+  .contact-rightside a {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-head {
+    font-size: 2rem;
+    padding-left: 15px;
+    margin: -5px 0 15px 10px;
+  }
+
+  .contact-social-icons {
+    margin: 15px auto;
+    gap: 1.5rem;
+  }
+
+  .contact-social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .input-container {
+    margin-bottom: 20px;
+  }
+
+  .input-container input,
+  .input-container textarea {
+    padding: 12px;
+  }
+
+  .submitBtn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .contact-head {
+    font-size: 1.8rem;
+  }
+
+  .contact-social-icons {
+    gap: 1rem;
+  }
+
+  .contact-social-icons a {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}
+
+/* For larger screens */
+@media screen and (min-width: 1440px) {
+  .contact-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .contact-head {
+    font-size: 4rem;
+  }
+}
+
+/* For landscape mode on mobile */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+  .contact {
+    min-height: auto;
+  }
+
+  .contact-social-icons {
+    margin: 10px auto;
+  }
+
+  .row {
+    padding-bottom: 5px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .contact,
+  .contact-head,
+  .contact-leftSide,
+  .contact-rightside,
+  .contact-social-icons a {
+    animation: none;
+    transition: none;
+  }
+}
+
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
