@@ -28,7 +28,7 @@ export class Allproject extends Component {
       },
       {
         id: 2,
-        title: "Hospital Ward Manufacture",
+        title: "MERN Health Furnish",
         description:
           "This project is a comprehensive website for Bajaj Wellmed International, built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It focuses on providing seamless access to healthcare solutions with an intuitive, user-friendly experience.",
         image: two,

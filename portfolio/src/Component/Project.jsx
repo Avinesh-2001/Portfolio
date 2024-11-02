@@ -19,7 +19,7 @@ class Project extends Component {
       },
       {
         id: 2,
-        title: "Hospital Ward Manufacture",
+        title: "MERN Health Furnish",
         description:
           "This project is a comprehensive website for BWI, designed to provide visitors with seamless access to healthcare solutions. The website is built using the MERN stack (MongoDB, Express.js, React.js, and Node.js) and focuses on delivering an intuitive and user-friendly experience.",
         image: two,
