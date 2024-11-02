@@ -54,7 +54,7 @@ const About = () => {
           <div className="about-image">
             <img
               src={about}
-              alt="Profile picture 'image'"
+              alt="Profile photo"
               className="profile-picture"
               loading="lazy" 
             />
