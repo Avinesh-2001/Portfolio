@@ -1,0 +1,19 @@
+.footer {
+    background-color: #6C757D; /* Footer background color */
+    color: #FFFFFF; /* Text color */
+    text-align: center; /* Center align text */
+    padding: 1rem 4rem;
+    /* margin: 3rem 0; */
+  }
+  
+  .footer .copyRight p {
+    margin: 0; /* Remove default margin */
+    font-size: 20px; /* Font size for the text */
+    font-weight: bold;
+  }
+  
+  .footer .fa {
+    color: #FFFFFF; /* Icon color to match text */
+    margin-left: 5px; /* Space between text and icon */
+  }
+  

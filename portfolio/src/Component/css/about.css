@@ -1,0 +1,250 @@
+/* Base Styles */
+body {
+    background-color: #E9ECEF;
+    color: #E0E0E0;
+    font-family: 'Roboto', sans-serif !important;
+    line-height: 1.6;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.about {
+    padding: 1rem;
+    margin: 10px;
+}
+
+/* Common Heading Styles */
+.section-head {
+    background: linear-gradient(90deg, #007BFF, #00A8E0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+    margin: -1.5rem 2rem 0rem 2rem;
+    padding-left: 15px;
+    /* animation: colorChange 5s infinite alternate; */
+}
+
+/* ------------------- ABOUT SECTION ------------------- */
+.main-container {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 6rem;
+    height: auto;
+    background-color: #E9ECEF;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.profile-picture {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #0288D1;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    animation: fadeInUp 1s ease-out;
+}
+
+.profile-picture:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 0 20px rgba(2, 136, 209, 0.5);
+}
+
+.about-content {
+    flex: 2;
+    padding-left: 2rem;
+    text-align: left;
+    animation: fadeInUp 1s ease-out 0.5s both;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bio-text {
+    margin: -1rem 2rem;
+    line-height: 1.5;
+    color: #212529;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow: hidden; 
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.read-more {
+    background-color: transparent;
+    border: 1px solid #0288D1;
+    color: #0288D1;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    border-radius: 4px;
+    animation: fadeInUp 1s ease-out 1s both;
+    font-family: 'Roboto', sans-serif;
+}
+
+.read-more:hover {
+    background-color: #0288D1;
+    color: #121212;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(2, 136, 209, 0.4);
+}
+
+.read-more:focus {
+    outline: 2px solid #0288D1;
+    outline-offset: 2px;
+}
+
+.about .line-styling {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .line-styling .style-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #007BFF, #FFC107);
+    animation: pulseCircle 2s infinite;
+}
+
+.about .line-styling .style-line {
+    width: 95%;
+    height: 5px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #007BFF, #FFC107);
+    animation: expandLine 1.5s ease-out;
+}
+
+/* Keyframe Animations */
+@keyframes expandLine {
+    0% { width: 0; }
+    100% { width: 95%; }
+}
+
+@keyframes pulseCircle {
+    0%, 100% { transform: scale(1); }
+    70% { transform: scale(1.2); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* For Medium screens (Tablets, 768px and up) */
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row; /* Side-by-side layout on tablets */
+    }
+
+    .about-image {
+        margin-bottom: 0;
+    }
+}
+
+/* For Small screens (Tablets, 768px and down) */
+@media (max-width: 768px) {
+    .main-container {
+        padding-top: 60px;
+    }
+
+    .about-container {
+        padding: 2rem;
+    }
+
+    .section-head {
+        font-size: 2.5rem; /* Smaller heading for smaller screens */
+    }
+
+    .bio-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* For Extra-small screens (Phones, 600px and down) */
+@media (max-width: 600px) {
+    .about-container {
+        padding: 1.5rem;
+        flex-direction: column; /* Stacks content vertically */
+    }
+
+    .section-head {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .about-content {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .profile-picture {
+        width: 200px;
+        height: 200px;
+    }
+
+    .bio-text {
+        font-size: 0.85rem;
+    }
+
+    .read-more {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* For Ultra-small screens (Phones, 480px and down) */
+@media (max-width: 480px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .section-head {
+        font-size: 1.8rem; /* Slightly smaller heading for very small screens */
+    }
+
+    .about-content {
+        padding: 0;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bio-text {
+        font-size: 0.8rem;
+        padding: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .read-more {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.75rem;
+    }
+}
