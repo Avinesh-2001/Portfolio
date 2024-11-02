@@ -27,7 +27,7 @@ function AppRoutes() {
 
   return (
     <>
-      {location.pathname != "/Allproject" && <Navbar />}
+      {location.pathname !== "/Allproject" && <Navbar />}
 
       {/* <Navbar /> */}
       <Routes>
