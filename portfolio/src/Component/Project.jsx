@@ -23,8 +23,8 @@ class Project extends Component {
         description:
           "This project is a comprehensive website for BWI, designed to provide visitors with seamless access to healthcare solutions. The website is built using the MERN stack (MongoDB, Express.js, React.js, and Node.js) and focuses on delivering an intuitive and user-friendly experience.",
         image: two,
-        link1:"https://github.com/Avinesh-2001/Hospital-Ward-Furniture-Website",
-        link2: "https://github.com/Avinesh-2001/Hospital-Ward-Furniture-Website",
+        link1:"https://github.com/Avinesh-2001/Mern-Health-Furnish",
+        link2: "https://github.com/Avinesh-2001/Mern-Health-Furnish",
         technologies: ["ReactJs", "Node.js", "Express.js", "MongoDB"],
       },
       {

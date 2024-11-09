@@ -32,10 +32,8 @@ export class Allproject extends Component {
         description:
           "This project is a comprehensive website for Bajaj Wellmed International, built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It focuses on providing seamless access to healthcare solutions with an intuitive, user-friendly experience.",
         image: two,
-        link1:
-          "https://github.com/Avinesh-2001/Hospital-Ward-Furniture-Website",
-        link2:
-          "https://github.com/Avinesh-2001/Hospital-Ward-Furniture-Website",
+        link1:"https://github.com/Avinesh-2001/Mern-Health-Furnish",
+        link2: "https://github.com/Avinesh-2001/Mern-Health-Furnish",
         technologies: ["ReactJs", "Node.js", "Express.js", "MongoDB"],
       },
       {
